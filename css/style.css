@@ -10,7 +10,7 @@
 /* MAIN */
 
 #main-container {
-    background-image: linear-gradient(120deg, rgba(10, 10, 10, 0.510) 0%,rgba(10, 10, 10, 0.600) 100%), url("/img/main-background.png"  )!important; 
+    background-image: linear-gradient(120deg, rgba(10, 10, 10, 0.510) 0%, rgba(10, 10, 10, 0.600) 100%), url("/img/main-background.png") !important;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -155,50 +155,58 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 3em;  
+    padding: 3em;
 
     & h5 {
-          font-size: 25px;
+        font-size: 25px;
         font-weight: 700;
         text-transform: uppercase;
     }
+
     & h1 {
         font-weight: 700;
         font-size: 35px;
     }
+
     & p {
-       margin-top: 1em;
+        margin-top: 1em;
     }
-  
+
 }
 
 
 
 .projeto {
-    .card{
-        background-color:  #151515;
+    .card {
+        background-color: #151515;
         border: none;
         color: white;
+
         .card-body {
             display: flex;
             justify-content: center;
             align-items: center;
         }
     }
+
     margin-top: -4em;
 
     &:nth-child(1) {
         transition-delay: 400ms;
     }
+
     &:nth-child(2) {
         transition-delay: 500ms;
     }
+
     &:nth-child(3) {
         transition-delay: 600ms;
     }
+
     &:nth-child(4) {
         transition-delay: 700ms;
     }
+
     & img {
         width: 100%;
         border-radius: 5px;
@@ -207,7 +215,7 @@
 
 
 .projeto-descricao {
-   & button {
+    & button {
         height: 4rem !important;
         padding: 0 3.5rem 0 3rem !important;
         margin-top: 0.6rem;
@@ -218,6 +226,7 @@
         color: #fff;
         border: 2px solid #fff;
         transition: 0.5s;
+
         &:hover {
             border: 2px solid #FF9800;
         }
@@ -227,7 +236,7 @@
 /* SECTION 3 */
 
 #servicos-container {
-    background-image: linear-gradient(120deg, rgba(10, 10, 10, 0.510) 0%,rgba(10, 10, 10, 0.600) 100%), url("/img/contato.jpg"  )!important; 
+    background-image: linear-gradient(120deg, rgba(10, 10, 10, 0.510) 0%, rgba(10, 10, 10, 0.600) 100%), url("/img/contato.jpg") !important;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -262,16 +271,233 @@
     padding: 2px;
 }
 
-.hidden{
+.servicos-descricao {
+    color: #fff;
+    padding-top: 2em;
+    font-size: 25px;
+
+    & h5 {
+        font-size: 25px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    & p {
+        color: rgba(255, 255, 255, 0.692);
+        font-size: 23px;
+    }
+}
+
+.servico-icon {
+    font-size: 45px;
+    color: #FF9800;
+    margin-bottom: 20px;
+}
+
+/* SECTION 4 */
+
+.footer-img {
+    background-image: linear-gradient(120deg, rgba(10, 10, 10, 0.510) 0%, rgba(10, 10, 10, 0.600) 100%), url("/img/footer.jpg") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 45vh;
+}
+
+/* FOOTER */
+footer {
+    background-color: #151515;
+    color: #fff;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.footer-descricao {
+    color: #fff;
+    padding-top: 2em;
+    font-size: 25px;
+
+    & h5 {
+        font-size: 25px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    & p {
+        color: rgba(255, 255, 255, 0.692);
+        font-size: 23px;
+    }
+}
+
+.footer-contato {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-title h5 {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    color: #FF9800;
+
+    & h2 {
+        font-weight: 700;
+        font-size: 35px;
+    }
+
+    & p {
+        color: rgba(255, 255, 255, 0.692);
+        font-size: 23px;
+    }
+}
+
+.hidden {
     opacity: 0;
     filter: blur(15px);
     transform: translateX(-100%);
-    transition: all 2s 
+    transition: all 2s
 }
 
-.show{
+.show {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
     transition: all 2s;
+}
+
+/* RESPONSIVO */
+
+@media(max-width: 1030px) {
+    .sobre-container {
+        padding-top: 10em;
+    }
+
+    .informacao-container p {
+        width: 50em;
+        text-align: center;
+    }
+
+    .informacao-skills img {
+        width: 80%;
+    }
+
+    #servicos {
+        width: 50%;
+    }
+}
+
+@media(max-width: 770px) {
+    .informacao-container p {
+        width: 40em;
+        text-align: center;
+    }
+
+    .informacao .row {
+        padding: 3em 0;
+    }
+
+    .informacao-skills img {
+        width: 90%;
+    }
+
+    #servicos {
+        width: 80%;
+    }
+
+    .servicos-descricao p {
+        font-size: 21px;
+    }
+
+    .footer-title p {
+        width: 90%;
+        text-align: center;
+    }
+
+    .footer-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+}
+
+@media(max-width: 430px) {
+    .informacao-container h4 {
+        font-size: 25px;
+    }
+
+    .informacao-container p {
+        width: 24em;
+        text-align: center;
+    }
+
+    #servicos-container {
+        height: 83em;
+    }
+
+    .servicos-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footer-row p {
+        font-size: 17px;
+    }
+
+}
+
+@media(max-width: 380px) {
+    .informacao-container h4 {
+        font-size: 22px;
+    }
+
+    .informacao-container p {
+        width: 22em;
+        text-align: center;
+    }
+
+    #servicos-container {
+        height: 91em;
+    }
+
+    .footer-row p {
+        font-size: 17px;
+    }
+
+}
+
+@media(max-width: 330px) {
+    .sobre-container h1 {
+        font-size: 65px;
+    }
+
+    .sobre-container h4 {
+        font-size: 25px;
+    }
+
+    .informacao-container h4 {
+        font-size: 20px;
+    }
+
+    .informacao-container p {
+        width: 18em;
+        text-align: center;
+    }
+
+    .informacao-perfil li span {
+        font-size: 14px;
+    }
+
+    #servicos-container {
+        height: 100em;
+    }
+
+    .footer-row p {
+        font-size: 15px;
+    }
+
 }
